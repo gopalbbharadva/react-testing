@@ -6,3 +6,9 @@ test('Greet component', () => {
   const greetElement = screen.getByText(/bye bro/i)
   expect(greetElement).toBeInTheDocument()
 })
+
+test('Greet component with a person name', () => {
+  render(<Greet name='Gopal' />)
+  const greetElement = screen.getByText(/bye Gopal bro/i)
+  expect(greetElement).toBeInTheDocument()
+})

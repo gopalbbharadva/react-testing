@@ -1,5 +1,3 @@
-import React from 'react'
-
-export const Greet = () => {
-  return <div>Bye bro</div>
+export const Greet = ({ name }: { name?: string }) => {
+  return <div>bye {name} bro</div>
 }
