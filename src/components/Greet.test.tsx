@@ -3,8 +3,11 @@ import { Greet } from './Greet'
 
 describe('Greet component test', () => {
   test('Component', () => {
+    // render the component on the DOM
     render(<Greet />)
+    // find the rendered component
     const greetElement = screen.getByText(/bye bro/i)
+    // assert against the element found which will pass or fail the test.
     expect(greetElement).toBeInTheDocument()
   })
 
